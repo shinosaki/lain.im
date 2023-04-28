@@ -1,0 +1,98 @@
+@font-face {
+  font-family: 'PT Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/PT-Mono.latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+body {
+  margin: 0;
+  background-color: #2a2a2a;
+  color: lightgray;
+  font-family: 'PT Mono', monospace;
+}
+a {
+  color: inherit;
+}
+
+#Header {
+  display: flex; flex-wrap: wrap; gap: 1rem;
+  align-items: flex-start; justify-content: center;
+  padding: 5rem 20%;
+  font-size: 1.5rem;
+}
+#Header figure img {
+  width: 160px; height: 160px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.2);
+  filter: grayscale(30%);
+}
+#Header section {
+  display: flex; flex-direction: column;
+}
+#Header section .footer {
+  width: 100%; text-align: right;
+  color: dimgray;
+  font-size: 1.2rem;
+}
+@media all and (max-width: 768px) {
+  #Header section {align-items: center; text-align: center;}
+  #Header {height: calc(100vh - 5rem * 2)}
+}
+
+#Main {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 5rem 0; padding-top: 2.5rem;
+}
+#Main h1 {
+  display: flex; align-items: center; justify-content: center;
+  margin-top: 8rem; margin-bottom: 5rem;
+}
+#Main a {text-decoration: unset; display: inline}
+#Main .cards {
+  margin: 0 15%;
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+#Main .cards .card {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 1rem;
+  padding: 0.5rem 1rem;
+  display: flex; gap: 1rem;
+}
+#Main figure {
+  margin: 1rem;
+  display: flex; align-items: center; justify-content: center;
+}
+#Main .cards .card .tags {
+  display: flex; gap: 0.5rem; flex-wrap: wrap;
+}
+#Main .cards .card .tags .tag {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #2a2a2a;
+  border-radius: 1rem;
+  padding: 0 0.5rem;
+}
+#Main .cards .card .osses {
+  justify-content: right;
+}
+#Main .cards .card .osses img {
+  width: 1rem; height: 1rem;
+}
+@media all and (min-width: 1064px) and (max-width: 1430px) {
+  #Main .cards {grid-template-columns: repeat(3, 1fr);}
+}
+@media all and (min-width: 768px) and (max-width: 1064px) {
+  #Main .cards {grid-template-columns: repeat(2, 1fr);}
+}
+@media all and (max-width: 768px) {
+  #Main .cards {grid-template-columns: repeat(1, 1fr);}
+}
+
+#Footer {
+  display: flex;
+  align-items: center; justify-content: center;
+  padding: 5rem 0;
+}
